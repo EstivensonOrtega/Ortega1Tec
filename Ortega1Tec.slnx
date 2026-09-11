@@ -1,0 +1,6 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/Ortega1Tec.Components/Ortega1Tec.Components.csproj" />
+    <Project Path="src/Ortega1Tec.Web/Ortega1Tec.Web.csproj" />
+  </Folder>
+</Solution>

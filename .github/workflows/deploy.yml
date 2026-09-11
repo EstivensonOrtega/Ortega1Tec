@@ -1,0 +1,64 @@
+name: Deploy Ortega1Tec
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Descargar código
+        uses: actions/checkout@v4
+
+      - name: Configurar GitHub Pages
+        uses: actions/configure-pages@v5
+        with:
+          enablement: true
+
+      - name: Configurar .NET 11 RC
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 11.0.100-rc.1.26425.128
+          dotnet-quality: preview
+
+      - name: Restaurar dependencias
+        run: dotnet restore Ortega1Tec.slnx
+
+      - name: Publicar aplicación
+        run: dotnet publish src/Ortega1Tec.Web/Ortega1Tec.Web.csproj -c Release -o release --no-restore
+
+      - name: Preparar archivos estáticos
+        run: |
+          sed -i 's#<base href="/" />#<base href="/Ortega1Tec/" />#' release/wwwroot/index.html
+          touch release/wwwroot/.nojekyll
+          cp release/wwwroot/index.html release/wwwroot/404.html
+
+      - name: Subir artefacto de Pages
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: release/wwwroot
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Publicar en GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
