@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="650" viewBox="0 0 1100 650" role="img" aria-labelledby="title desc">
+  <title id="title">Configuración esperada de GitHub Pages</title>
+  <desc id="desc">Ilustración de la selección GitHub Actions en la configuración de Pages.</desc>
+  <rect width="1100" height="650" fill="#0d1117"/>
+  <rect x="0" y="0" width="1100" height="66" fill="#161b22"/>
+  <circle cx="42" cy="33" r="18" fill="#f0f6fc"/>
+  <text x="75" y="42" fill="#f0f6fc" font-family="Segoe UI, sans-serif" font-size="20" font-weight="700">Ortega1Tec / Settings / Pages</text>
+  <text x="60" y="125" fill="#f0f6fc" font-family="Segoe UI, sans-serif" font-size="30" font-weight="700">GitHub Pages</text>
+  <text x="60" y="175" fill="#f0f6fc" font-family="Segoe UI, sans-serif" font-size="22" font-weight="700">Build and deployment</text>
+  <text x="60" y="220" fill="#8b949e" font-family="Segoe UI, sans-serif" font-size="16">Source</text>
+  <rect x="60" y="240" width="330" height="58" rx="8" fill="#238636" stroke="#3fb950" stroke-width="2"/>
+  <text x="86" y="277" fill="#ffffff" font-family="Segoe UI, sans-serif" font-size="19" font-weight="700">GitHub Actions</text>
+  <path d="M350 260 l12 12 l12 -12" fill="none" stroke="#ffffff" stroke-width="3"/>
+  <rect x="60" y="335" width="980" height="105" rx="10" fill="#161b22" stroke="#30363d"/>
+  <text x="88" y="375" fill="#f0f6fc" font-family="Segoe UI, sans-serif" font-size="19" font-weight="700">Deploy Ortega1Tec</text>
+  <text x="88" y="407" fill="#8b949e" font-family="Segoe UI, sans-serif" font-size="16">The workflow builds the Blazor WebAssembly app and deploys wwwroot.</text>
+  <rect x="60" y="492" width="980" height="74" rx="10" fill="#1c2128" stroke="#3fb950" stroke-width="2"/>
+  <text x="88" y="537" fill="#7ee787" font-family="Segoe UI, sans-serif" font-size="18">Enforce HTTPS: enabled</text>
+  <text x="60" y="610" fill="#8b949e" font-family="Segoe UI, sans-serif" font-size="15">Ilustración documental: validar estos valores en Settings → Pages.</text>
+</svg>
