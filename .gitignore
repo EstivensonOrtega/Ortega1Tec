@@ -88,6 +88,9 @@ project.fragment.lock.json
 artifacts/
 .artifacts/
 
+# Sensitive local documentation
+/docs/Datos-Sensibles/
+
 # ASP.NET Scaffolding
 ScaffoldingReadMe.txt
 
